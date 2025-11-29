@@ -1,0 +1,83 @@
+<div class="min-h-screen bg-white">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-dental-light-blue to-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center" @fadeInUp>
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">About Us</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Dedicated to providing exceptional dental care with compassion and expertise
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div @fadeInUp>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+          <p class="text-lg text-gray-600 mb-4">
+            Founded with a vision to make quality dental care accessible to everyone, Dental Clinic has been 
+            serving the community for over 15 years. We combine years of experience with cutting-edge technology 
+            to provide the best possible dental treatments.
+          </p>
+          <p class="text-lg text-gray-600 mb-4">
+            Our team of highly qualified dentists and staff are committed to ensuring your comfort and 
+            satisfaction. We believe in building long-term relationships with our patients based on trust, 
+            transparency, and exceptional care.
+          </p>
+          <p class="text-lg text-gray-600">
+            At Dental Clinic, your smile is our mission. We strive to create a welcoming environment where 
+            patients feel at ease and confident in the care they receive.
+          </p>
+        </div>
+        <div @fadeInUp>
+          <div class="bg-dental-light-blue rounded-lg p-8 h-full flex items-center justify-center">
+            <div class="text-center">
+              <span class="text-9xl">🦷</span>
+              <p class="text-2xl font-semibold text-gray-800 mt-4">Quality Care</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 md:py-24 bg-dental-light-blue">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div *ngFor="let stat of stats" class="text-center" @fadeInUp>
+          <div class="text-4xl md:text-5xl font-bold text-dental-blue mb-2">{{ stat.number }}</div>
+          <div class="text-gray-700 font-medium">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="bg-white rounded-lg shadow-lg p-8" @fadeInUp>
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Mission</h3>
+          <p class="text-gray-600 text-lg">
+            To provide exceptional dental care that improves the oral health and overall well-being of our 
+            patients. We are committed to using the latest technology and techniques to deliver the highest 
+            quality treatments in a comfortable and caring environment.
+          </p>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg p-8" @fadeInUp>
+          <h3 class="text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
+          <p class="text-gray-600 text-lg">
+            To be the leading dental clinic in the region, recognized for excellence in patient care, 
+            innovation in treatment methods, and commitment to community health. We envision a future where 
+            everyone has access to quality dental care.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

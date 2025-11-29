@@ -1,0 +1,82 @@
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-dental-light-blue to-white py-20 md:py-32">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center" @fadeInUp>
+      <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+        Dental Clinic
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Your trusted partner for exceptional dental care and a beautiful, healthy smile
+      </p>
+      <a routerLink="/appointments" 
+         class="inline-block bg-dental-blue text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-all transform hover:scale-105 shadow-lg">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" @fadeIn>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Comprehensive dental care services tailored to your needs
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div *ngFor="let service of services; let i = index" 
+           class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow transform hover:-translate-y-2"
+           [@fadeInUp]>
+        <div class="text-5xl mb-4 text-center">{{ service.icon }}</div>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-3 text-center">{{ service.title }}</h3>
+        <p class="text-gray-600 text-center">{{ service.description }}</p>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a routerLink="/services" 
+         class="inline-block text-dental-blue text-lg font-semibold hover:underline">
+        View All Services →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="py-16 md:py-24 bg-dental-light-blue">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" @fadeIn>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center" @fadeInUp>
+        <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+          <span class="text-4xl">👨‍⚕️</span>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Expert Doctors</h3>
+        <p class="text-gray-600">Our team consists of highly qualified and experienced dental professionals.</p>
+      </div>
+
+      <div class="text-center" @fadeInUp>
+        <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+          <span class="text-4xl">🏥</span>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Modern Equipment</h3>
+        <p class="text-gray-600">State-of-the-art dental technology for the best treatment experience.</p>
+      </div>
+
+      <div class="text-center" @fadeInUp>
+        <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+          <span class="text-4xl">❤️</span>
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-900 mb-3">Patient Care</h3>
+        <p class="text-gray-600">We prioritize your comfort and well-being throughout your dental journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+

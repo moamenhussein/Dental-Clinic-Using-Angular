@@ -1,0 +1,59 @@
+<div class="min-h-screen bg-white">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-dental-light-blue to-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center" @fadeInUp>
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Our Services</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Comprehensive dental care services to meet all your oral health needs
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div *ngFor="let service of services; let i = index" 
+             class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
+             [@fadeInUp]>
+          <div class="flex items-start mb-6">
+            <div class="text-6xl mr-4">{{ service.icon }}</div>
+            <div class="flex-1">
+              <h3 class="text-3xl font-bold text-gray-900 mb-4">{{ service.title }}</h3>
+              <p class="text-gray-600 text-lg mb-4">{{ service.description }}</p>
+              <ul class="space-y-2 mb-6">
+                <li *ngFor="let feature of service.features" class="flex items-center text-gray-700">
+                  <svg class="w-5 h-5 text-dental-blue mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  {{ feature }}
+                </li>
+              </ul>
+              <a routerLink="/appointments" 
+                 class="inline-block bg-dental-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                Book Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-dental-light-blue">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" @fadeInUp>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Ready to Schedule Your Visit?</h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Book an appointment today and take the first step towards a healthier, brighter smile.
+      </p>
+      <a routerLink="/appointments" 
+         class="inline-block bg-dental-blue text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-all transform hover:scale-105 shadow-lg">
+        Book Appointment Now
+      </a>
+    </div>
+  </section>
+</div>
+
